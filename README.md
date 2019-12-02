@@ -2,8 +2,8 @@
 
 how to use?
 
-The color picker extends a SurfaceView, this needs to be added to some existent view, as for example, a LinearLayout
-You need to inform the current selected color on the class constructor using the R, G and B for the current color RGB channels.
+The color picker extends a SurfaceView, this needs to be added to some existent view, as for example, a LinearLayout.
+You need to inform the current selected color (Android's native color format) on the class constructor.
 When some color is clicked in the color wheel, the callback onColorSelected is called.
 
 e.g:
@@ -11,7 +11,7 @@ e.g:
 ```
 LinearLayout colorArea = findViewById(R.id.colorArea);
 
-ColorPicker colorPicker = new ColorPicker(this, r, g, b);
+ColorPicker colorPicker = new ColorPicker(this, color);
 colorPicker.setOnClickListener(new ColorPicker.OnClickListener() {
 	@Override
 	public void onColorSelected(int color) {
