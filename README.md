@@ -18,6 +18,9 @@ colorPicker.setOnClickListener(new ColorPicker.OnClickListener() {
 		/* color in Android native color format */
 	}
 });
+colorArea.addView(colorPicker);
 ```
-![Color Wheel](colorwheel.png)
+<p align="center"> 
+<img src="colorwheel.png">
+</p>
 
