@@ -8,7 +8,7 @@ When some color is clicked in the color wheel, the callback onColorSelected is c
 
 e.g:
 
-'''
+```
 LinearLayout colorArea = findViewById(R.id.colorArea);
 
 ColorPicker colorPicker = new ColorPicker(this, r, g, b);
@@ -18,5 +18,5 @@ colorPicker.setOnClickListener(new ColorPicker.OnClickListener() {
 		/* color in Android native color format */
 	}
 });
-'''
+```
 
