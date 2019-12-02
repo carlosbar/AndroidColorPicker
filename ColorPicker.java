@@ -157,7 +157,7 @@ public class ColorPicker extends SurfaceView implements SurfaceHolder.Callback {
 		for (int x = selectedColor; x < 360 + selectedColor; x++) {
 
 			for (int y = 0; y < radius; y++) {
-				float[] hsv = {selectedColor, (float) y / radius, (float) x / (360.0f + selectedColor)};
+				float[] hsv = {selectedColor, (float) y / radius, (float) ((360 + x - selectedColor) % 360) / 360.0f};
 
 				colors[y] = Color.HSVToColor(hsv);
 			}
