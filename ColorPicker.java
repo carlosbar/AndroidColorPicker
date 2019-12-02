@@ -154,21 +154,20 @@ public class ColorPicker extends SurfaceView implements SurfaceHolder.Callback {
 		p.setColor(Color.WHITE);
 		canvas.drawCircle(centerX, centerY, radius, p);
 
-		for (int x = 0; x < 360; x++) {
+		for (int x = selectedColor; x < 360 + selectedColor; x++) {
 
 			for (int y = 0; y < radius; y++) {
-				float[] hsv = {selectedColor, (float) y / radius, (float) x / 360.0f};
+				float[] hsv = {selectedColor, (float) y / radius, (float) x / (360.0f + selectedColor)};
 
 				colors[y] = Color.HSVToColor(hsv);
 			}
 
-			float cx = (float) (centerX + Math.cos(Math.toRadians(x)) * (radius + 5));
-			float cy = (float) (centerY + Math.sin(Math.toRadians(x)) * (radius + 5));
+			float cx = (float) (centerX + Math.cos(Math.toRadians(x % 360)) * (radius + 5));
+			float cy = (float) (centerY + Math.sin(Math.toRadians(x % 360)) * (radius + 5));
 
 			p.setShader(new LinearGradient(centerX, centerY, cx, cy, colors, null, Shader.TileMode.REPEAT));
 			canvas.drawLine(centerX, centerY, cx, cy, p);
 		}
-
 		getHolder().unlockCanvasAndPost(canvas);
 	}
 }
