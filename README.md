@@ -19,4 +19,5 @@ colorPicker.setOnClickListener(new ColorPicker.OnClickListener() {
 	}
 });
 ```
+![Color Wheel](wheel.png)
 
