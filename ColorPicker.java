@@ -40,8 +40,8 @@ public class ColorPicker extends SurfaceView implements SurfaceHolder.Callback {
 		super(context);
 		this.setClickable(true);
 		float [] hsv = new float[3];
-		int r = color >> 16 & 0xff;
-		int g = color >> 8 & 0xff;
+		int r = (color >> 16) & 0xff;
+		int g = (color >> 8) & 0xff;
 		int b = color & 0xff;
 		Color.RGBToHSV(r, g, b, hsv);
 		selectedColor = (int) hsv[0];
