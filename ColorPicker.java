@@ -75,11 +75,11 @@ public class ColorPicker extends SurfaceView implements SurfaceHolder.Callback {
 						hsv[2] = 1.0f;
 						drawPicker();
 					} else {
-						float angle = (float) (360 + Math.atan2(y - centerY, x - centerX) / Math.PI * 180) % 360;
+						double angle = (360 + (360 + Math.atan2(y - centerY, x - centerX) / Math.PI * 180 - selectedColor)) % 360;
 						float distance = (float) distanceFromPoint(centerX, centerY, x, y);
 						hsv[0] = selectedColor;
 						hsv[1] = distance / radius;
-						hsv[2] = angle / 360;
+						hsv[2] = (float) angle / 360;
 					}
 					onClickListener.onColorSelected(Color.HSVToColor(hsv));
 				}
