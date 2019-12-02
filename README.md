@@ -21,7 +21,7 @@ colorPicker.setOnClickListener(new ColorPicker.OnClickListener() {
 colorArea.addView(colorPicker);
 ```
 
-The outside circle contains all colors from HSV color map. The center circle contains the variations in the saturation and value for the current selected color.
+The outside circle contains all colors from HSV color map. The center circle contains the variations in the saturation and value for the current selected color. Clicking in the outside circle will change the center wheel accordingly.
 
 <p align="center"> 
 <img src="colorwheel.png">
