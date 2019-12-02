@@ -8,16 +8,15 @@ When some color is clicked in the color wheel, the callback onColorSelected is c
 
 e.g:
 
-...
+'''
 LinearLayout colorArea = findViewById(R.id.colorArea);
 
 ColorPicker colorPicker = new ColorPicker(this, r, g, b);
 colorPicker.setOnClickListener(new ColorPicker.OnClickListener() {
 	@Override
 	public void onColorSelected(int color) {
-		theColor = String.format(Locale.getDefault(), "#%08x", color);
-		selectedColor.setBackgroundColor(color);
+		/* color in Android native color format */
 	}
 });
-...
+'''
 
