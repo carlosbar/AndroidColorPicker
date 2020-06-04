@@ -2,7 +2,7 @@
 
 how to use?
 
-The color picker extends a SurfaceView, this needs to be added to some existent view, as for example, a LinearLayout.
+The color picker extends a SurfaceView, this needs to be added to some existent view, as for example, a LinearLayout (Remember to add a background color to the layout!).
 You need to inform the current selected color (Android's native color format) on the class constructor.
 When some color is clicked in the color wheel, the callback onColorSelected is called.
 
